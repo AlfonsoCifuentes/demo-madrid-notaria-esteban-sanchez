@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notaría Esteban Sánchez Sánchez | Madrid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1A2F5A;
+      --cream: #F2F0EB;
+      --gold: #8B7355;
+    }
+    body { font-family: Georgia, 'Times New Roman', serif; color: #2c2c2c; background: #fff; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(26,47,90,0.96);
+      backdrop-filter: blur(6px);
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.04em; }
+    .nav-tel { color: var(--gold); font-size: 0.95rem; text-decoration: none; letter-spacing: 0.03em; }
+    .nav-tel:hover { color: #fff; }
+
+    /* HERO */
+    .hero {
+      position: relative; height: 100vh; min-height: 600px;
+      background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80');
+      background-size: cover; background-position: center;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(26,47,90,0.82) 0%, rgba(0,0,0,0.55) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 1.5rem; }
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 1rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .hero-content p {
+      color: var(--cream); font-size: clamp(1rem, 2vw, 1.25rem);
+      margin-bottom: 2rem; letter-spacing: 0.03em;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    }
+    .btn-primary {
+      display: inline-block; padding: 1rem 2.5rem;
+      background: var(--gold); color: #fff;
+      font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600;
+      text-decoration: none; letter-spacing: 0.08em;
+      transition: background 0.3s, transform 0.2s;
+      border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: #6e5b42; transform: translateY(-2px); }
+
+    /* SECTIONS */
+    section { padding: 5rem 1.5rem; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--navy); text-align: center; margin-bottom: 0.6rem; font-weight: 700;
+    }
+    .section-sub { text-align: center; color: var(--gold); letter-spacing: 0.08em; font-size: 0.85rem; margin-bottom: 3rem; text-transform: uppercase; }
+    .divider { width: 60px; height: 3px; background: var(--gold); margin: 0.8rem auto 0; }
+
+    /* SERVICES */
+    .services { background: var(--cream); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem; max-width: 1100px; margin: 0 auto;
+    }
+    .service-card {
+      background: #fff; padding: 2.2rem 1.8rem;
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 4px 20px rgba(26,47,90,0.08);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(26,47,90,0.15); }
+    .service-icon { margin-bottom: 1rem; }
+    .service-card h3 {
+      font-family: 'Playfair Display', serif; color: var(--navy);
+      font-size: 1.15rem; margin-bottom: 0.6rem;
+    }
+    .service-card p { color: #555; font-size: 0.92rem; line-height: 1.7; }
+
+    /* HOW IT WORKS */
+    .how { background: #fff; }
+    .steps { display: flex; flex-wrap: wrap; gap: 2rem; max-width: 900px; margin: 0 auto; justify-content: center; }
+    .step { flex: 1 1 220px; text-align: center; padding: 1.5rem; }
+    .step-num {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--navy); color: #fff;
+      font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .step h3 { font-family: 'Playfair Display', serif; color: var(--navy); margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .step p { color: #555; font-size: 0.9rem; line-height: 1.6; }
+
+    /* CONTACT */
+    .contact { background: var(--navy); text-align: center; }
+    .contact .section-title { color: #fff; }
+    .contact .section-sub { color: var(--gold); }
+    .contact .divider { background: var(--gold); }
+    .contact-info { margin: 2rem auto; max-width: 500px; }
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem;
+      background: rgba(255,255,255,0.07); padding: 1rem 1.5rem;
+      margin-bottom: 1rem; border-left: 3px solid var(--gold);
+    }
+    .contact-item svg { flex-shrink: 0; }
+    .contact-item span { color: var(--cream); font-size: 1rem; }
+    .contact-item a { color: var(--gold); text-decoration: none; }
+    .contact-item a:hover { color: #fff; }
+
+    /* FOOTER */
+    footer {
+      background: #0f1e3a; color: #888; text-align: center;
+      padding: 1.8rem 1rem; font-size: 0.82rem; letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-logo { font-size: 0.9rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .steps { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Notaría Esteban Sánchez Sánchez</div>
+    <a href="tel:+34914776750" class="nav-tel">+34 914 77 67 50</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Notaría Esteban Sánchez Sánchez</h1>
+      <p>Seguridad jurídica y asesoramiento notarial de confianza en Madrid</p>
+      <a href="tel:+34914776750" class="btn-primary">Solicitar Cita</a>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Todo lo que necesita, con la garantía de la fe pública notarial</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1A2F5A" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+        </div>
+        <h3>Escrituras Públicas</h3>
+        <p>Compraventa de inmuebles, hipotecas, donaciones y todo tipo de escrituras con plena validez jurídica.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1A2F5A" stroke-width="1.5"><path d="M9 12h6m-3-3v6M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z"/></svg>
+        </div>
+        <h3>Testamentos</h3>
+        <p>Redacción y custodia de testamentos, garantizando que su última voluntad quede protegida y sea respetada.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1A2F5A" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Poderes Notariales</h3>
+        <p>Poderes generales y especiales para representación legal, gestiones bancarias, fiscales y administrativas.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1A2F5A" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+        </div>
+        <h3>Actas Notariales</h3>
+        <p>Actas de presencia, notoriedad y protocolización para dar fe de hechos y situaciones con eficacia legal.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1A2F5A" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Legalizaciones</h3>
+        <p>Apostillas, legitimaciones de firma y legalización de documentos para su uso en España y en el extranjero.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1A2F5A" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Asesoría Jurídica</h3>
+        <p>Orientación legal personalizada antes y durante cualquier trámite notarial para proteger sus intereses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2 class="section-title">¿Cómo Funciona?</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Tres pasos para completar su trámite notarial</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Consulta Inicial</h3>
+        <p>Contáctenos por teléfono o visítenos. Le explicamos el proceso y la documentación necesaria.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Preparación</h3>
+        <p>Revisamos y preparamos toda la documentación con rigor jurídico y atención al detalle.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Firma y Validez</h3>
+        <p>Firmamos ante notario con plena fe pública. Su documento tiene validez jurídica inmediata.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 class="section-title">Contacte con Nosotros</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Estamos a su disposición</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.76A16 16 0 0 0 15.24 16l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span><a href="tel:+34914776750">+34 914 77 67 50</a></span>
+      </div>
+      <div class="contact-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Madrid, España</span>
+      </div>
+      <div class="contact-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B7355" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Lunes a Viernes: 9:00 – 14:00 | 16:00 – 18:30</span>
+      </div>
+    </div>
+    <a href="tel:+34914776750" class="btn-primary">Llamar Ahora</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Notaría Esteban Sánchez Sánchez &mdash; Madrid &mdash; Colegio Notarial de Madrid</p>
+  </footer>
+
+</body>
+</html>
