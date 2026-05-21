@@ -1,0 +1,348 @@
+:root {
+    --slate: #232b38;
+    --slate-soft: #5b6572;
+    --sand: #f3eee5;
+    --sand-deep: #ddd4c7;
+    --olive: #727c5d;
+    --brass: #b3905e;
+    --white: #ffffff;
+    --line: rgba(35, 43, 56, 0.12);
+    --shadow: 0 22px 66px rgba(35, 43, 56, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, #faf7f1 0%, var(--sand) 58%, #ece5db 100%);
+    color: var(--slate);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.masthead {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.1rem 4vw;
+    background: rgba(243, 238, 229, 0.92);
+    border-bottom: 1px solid rgba(35, 43, 56, 0.08);
+    backdrop-filter: blur(14px);
+}
+
+.logo {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-decoration: none;
+}
+
+.logo span {
+    display: block;
+    color: var(--slate-soft);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin-top: 0.28rem;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.nav a {
+    color: var(--slate-soft);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-link-cta {
+    padding: 0.8rem 1.1rem;
+    border: 1px solid var(--olive);
+    color: var(--olive) !important;
+}
+
+.eyebrow {
+    color: var(--olive);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items: center;
+    min-height: calc(100vh - 76px);
+    padding: clamp(3rem, 5vw, 5rem) 4vw 4rem;
+}
+
+.hero-main h1,
+.section-head h2,
+.contact-copy h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+}
+
+.hero-main h1 {
+    margin-top: 0.95rem;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    max-width: 10.5ch;
+}
+
+.hero-lead,
+.contact-copy p,
+.contact-card p,
+.service-grid p,
+.process-steps p {
+    color: var(--slate-soft);
+}
+
+.hero-lead {
+    max-width: 57ch;
+    margin-top: 1.3rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.2rem;
+    padding: 0.95rem 1.35rem;
+    border: 1px solid transparent;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-solid {
+    background: var(--slate);
+    color: var(--white);
+}
+
+.btn-outline {
+    border-color: var(--line);
+}
+
+.hero-rail {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.rail-image,
+.rail-card,
+.service-grid article,
+.process-steps article,
+.contact-card {
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.rail-image {
+    overflow: hidden;
+    min-height: 24rem;
+}
+
+.rail-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 24rem;
+    object-fit: cover;
+}
+
+.rail-card {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(35, 43, 56, 0.08);
+}
+
+.rail-card ul {
+    margin-top: 0.8rem;
+    padding-left: 1.1rem;
+    color: var(--slate-soft);
+    display: grid;
+    gap: 0.45rem;
+}
+
+.services-panel,
+.process-panel,
+.contact-panel {
+    padding: 5rem 4vw;
+}
+
+.services-panel {
+    background: rgba(255, 255, 255, 0.48);
+    border-top: 1px solid rgba(35, 43, 56, 0.06);
+    border-bottom: 1px solid rgba(35, 43, 56, 0.06);
+}
+
+.section-head {
+    max-width: 56rem;
+}
+
+.section-head h2,
+.contact-copy h2 {
+    margin-top: 0.75rem;
+    font-size: clamp(2.2rem, 5vw, 3.7rem);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+    margin-top: 2rem;
+}
+
+.service-grid article,
+.process-steps article {
+    padding: 1.4rem;
+    background: var(--white);
+    border: 1px solid rgba(35, 43, 56, 0.08);
+}
+
+.service-grid h3,
+.process-steps h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.process-steps strong {
+    color: var(--brass);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.contact-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
+    gap: 1.4rem;
+    align-items: start;
+}
+
+.contact-card {
+    padding: 1.55rem;
+    background: var(--slate);
+    color: var(--white);
+}
+
+.phone {
+    display: inline-block;
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(2.1rem, 5vw, 3.3rem);
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.contact-card p {
+    color: rgba(255, 255, 255, 0.72);
+    margin-top: 0.8rem;
+}
+
+.mail {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #d7c3a5;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer {
+    padding: 2rem 4vw 3rem;
+    color: var(--slate-soft);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 980px) {
+    .masthead,
+    .hero-grid,
+    .service-grid,
+    .process-steps,
+    .contact-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .masthead {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .rail-image,
+    .rail-image img {
+        min-height: 18rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .masthead,
+    .hero-grid,
+    .services-panel,
+    .process-panel,
+    .contact-panel {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    .hero-main h1 {
+        font-size: clamp(2.4rem, 14vw, 3.8rem);
+    }
+
+    .btn,
+    .nav-link-cta {
+        width: 100%;
+    }
+}

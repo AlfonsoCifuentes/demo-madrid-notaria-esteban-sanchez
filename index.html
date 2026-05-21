@@ -3,165 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esteban Sánchez Sánchez Notaría | Excelencia Notarial en Madrid</title>
+    <title>Esteban Sánchez Sánchez Notaría | Servicio notarial con lectura clara</title>
+    <meta name="description" content="Esteban Sánchez Sánchez Notaría presta servicio en Madrid con escrituras, testamentos, poderes, actas y asesoría notarial explicada con claridad.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1A2F5A;
-            --bg-crema: #F2F0EB;
-            --accent: #8B7355;
-            --text: #333333;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; color: var(--text); line-height: 1.6; background-color: var(--bg-crema); }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--primary); }
-        
-        /* Hero */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(26, 47, 90, 0.7), rgba(26, 47, 90, 0.7)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=80&fit=crop');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-        .hero h1 { color: white; font-size: 3.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.25rem; max-width: 700px; margin-bottom: 2rem; }
-        .btn {
-            background-color: var(--accent);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 2px;
-            transition: background 0.3s;
-        }
-        .btn:hover { background-color: #6d5a42; }
-
-        /* Services */
-        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-bottom: 4px solid var(--accent);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .card svg { width: 40px; height: 40px; fill: var(--accent); margin-bottom: 15px; }
-        .card h3 { margin-bottom: 10px; font-size: 1.4rem; }
-
-        /* How it works */
-        .steps { background-color: white; }
-        .step-item { text-align: center; padding: 20px; }
-        .step-num { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 3rem; 
-            color: var(--accent); 
-            opacity: 0.3;
-            margin-bottom: -20px;
-        }
-
-        /* Contact */
-        .contact { text-align: center; background: var(--primary); color: white; }
-        .contact h2 { color: white; margin-bottom: 20px; }
-        .phone { font-size: 2rem; color: var(--accent); font-weight: bold; margin: 20px 0; display: block; text-decoration: none; }
-
-        footer { background: #0c1629; color: rgba(255,255,255,0.6); text-align: center; padding: 40px 20px; font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .section { padding: 50px 20px; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="hero">
-        <h1>Esteban Sánchez Sánchez Notaría</h1>
-        <p>Seguridad jurídica, rigor y cercanía en el corazón de Madrid.</p>
-        <a href="#contacto" class="btn">SOLICITAR CITA</a>
-    </section>
+    <header class="masthead">
+        <a href="#hero" class="logo">ESS Notaría <span>Madrid</span></a>
+        <nav class="nav" aria-label="Principal">
+            <a href="#servicios">Servicios</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#contacto" class="nav-link-cta">Cita directa</a>
+        </nav>
+    </header>
 
-    <section class="section">
-        <div class="section-title">
-            <h2>Nuestros Servicios</h2>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-                <h3>Escrituras</h3>
-                <p>Compraventas, hipotecas, herencias y donaciones con total garantía.</p>
+    <main>
+        <section id="hero" class="hero-grid">
+            <div class="hero-main">
+                <p class="eyebrow">Seguridad jurídica con explicacion clara</p>
+                <h1>Una notaría para entender bien cada documento antes de firmarlo.</h1>
+                <p class="hero-lead">Escrituras, testamentos, poderes, actas, legalizaciones y asesoría imparcial con una metodología orientada a lectura clara, preparación previa y otorgamiento sin ambigüedades.</p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn btn-solid">Solicitar cita</a>
+                    <a href="tel:+34914776750" class="btn btn-outline">+34 914 77 67 50</a>
+                </div>
             </div>
-            <div class="card">
-                <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-                <h3>Testamentos</h3>
-                <p>Planificación sucesoria y voluntad clara para el futuro.</p>
-            </div>
-            <div class="card">
-                <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-                <h3>Poderes Notariales</h3>
-                <p>Delegación de facultades con seguridad y precisión legal.</p>
-            </div>
-            <div class="card">
-                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
-                <h3>Actas</h3>
-                <p>Constatación fehaciente de hechos y manifestaciones.</p>
-            </div>
-            <div class="card">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                <h3>Legalizaciones</h3>
-                <p>Validación de firmas y documentos para uso nacional e internacional.</p>
-            </div>
-            <div class="card">
-                <svg viewBox="0 0 24 24"><path d="M21 5.64L13.43 2.3c-.58-.26-1.27-.26-1.85 0L4 5.64C3.39 5.92 3 6.54 3 7.22v9.56c0 .68.39 1.3 1 1.58l7.58 3.34c.58.26 1.27.26 1.85 0L21 18.36c.61-.28 1-1.9 1-1.58V7.22c0-.68-.39-1.3-1-1.58zM12 20.37L5 17.28V8.11l7 3.1 7-3.1v9.17l-7 3.09z"/></svg>
-                <h3>Asesoría</h3>
-                <p>Asesoramiento jurídico imparcial en la formalización de contratos.</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="section steps">
-        <div class="section-title">
-            <h2>Cómo Trabajamos</h2>
-        </div>
-        <div class="grid">
-            <div class="step-item">
-                <div class="step-num">01</div>
-                <h3>Consulta</h3>
-                <p>Analizamos su caso y le indicamos la documentación necesaria.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-num">02</div>
-                <h3>Preparación</h3>
-                <p>Redactamos el instrumento público con rigor técnico.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-num">03</div>
-                <h3>Firma</h3>
-                <p>Otorgamiento ante Notario y entrega de copias.</p>
-            </div>
-        </div>
-    </section>
+            <aside class="hero-rail">
+                <div class="rail-image">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1800&q=80&fit=crop" alt="Interior de oficina profesional con luz natural">
+                </div>
+                <div class="rail-card">
+                    <p class="eyebrow">Servicios principales</p>
+                    <ul>
+                        <li>Escrituras y compraventas</li>
+                        <li>Testamentos y sucesiones</li>
+                        <li>Poderes notariales</li>
+                        <li>Actas y legalizaciones</li>
+                        <li>Asesoría previa imparcial</li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
 
-    <section id="contacto" class="section contact">
-        <h2>Atención Directa</h2>
-        <p>Llámenos para concertar su cita o resolver dudas iniciales.</p>
-        <a href="tel:+34914776750" class="phone">+34 914 77 67 50</a>
-        <p>Madrid, España</p>
-    </section>
+        <section id="servicios" class="services-panel">
+            <div class="section-head">
+                <p class="eyebrow">Servicios</p>
+                <h2>Un mapa completo de intervenciones notariales para particulares y empresa.</h2>
+            </div>
+            <div class="service-grid">
+                <article><h3>Escrituras</h3><p>Compraventas, hipotecas, herencias y donaciones con garantía documental.</p></article>
+                <article><h3>Testamentos</h3><p>Planificación sucesoria y voluntad clara para el futuro.</p></article>
+                <article><h3>Poderes</h3><p>Delegación de facultades con seguridad y precisión legal.</p></article>
+                <article><h3>Actas</h3><p>Constatación fehaciente de hechos y manifestaciones relevantes.</p></article>
+                <article><h3>Legalizaciones</h3><p>Validación de firmas y documentos para ámbito nacional e internacional.</p></article>
+                <article><h3>Asesoría</h3><p>Asesoramiento imparcial antes de formalizar contratos y operaciones sensibles.</p></article>
+            </div>
+        </section>
 
-    <footer>
+        <section id="proceso" class="process-panel">
+            <div class="section-head slim">
+                <p class="eyebrow">Proceso</p>
+                <h2>Tres momentos para ordenar la operación antes del otorgamiento.</h2>
+            </div>
+            <div class="process-steps">
+                <article>
+                    <strong>01</strong>
+                    <h3>Consulta</h3>
+                    <p>Analizamos el caso y la documentación necesaria antes de fijar el cierre.</p>
+                </article>
+                <article>
+                    <strong>02</strong>
+                    <h3>Preparación</h3>
+                    <p>Redactamos y revisamos el instrumento con rigor técnico y lenguaje comprensible.</p>
+                </article>
+                <article>
+                    <strong>03</strong>
+                    <h3>Firma</h3>
+                    <p>Otorgamiento, lectura y entrega de copias con claridad sobre alcance y efectos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-panel">
+            <div class="contact-copy">
+                <p class="eyebrow">Contacto</p>
+                <h2>Atención directa para concertar cita y revisar documentación previa.</h2>
+                <p>Madrid, España. Servicio notarial orientado a lectura clara, preparación previa y seguridad jurídica efectiva.</p>
+            </div>
+            <div class="contact-card">
+                <a href="tel:+34914776750" class="phone">+34 914 77 67 50</a>
+                <p>Escrituras, testamentos, poderes, actas, legalizaciones y asesoría notarial.</p>
+                <a href="mailto:info@essnotaria.es" class="mail">info@essnotaria.es</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
         <p>&copy; 2026 Esteban Sánchez Sánchez Notaría. Todos los derechos reservados.</p>
     </footer>
 </body>
